@@ -1,0 +1,133 @@
+{%extends 'base.html'%}
+{% block content %}
+<h3>{% block title%} SMB {% endblock %}</h3>
+<div class="container" style="border:2px solid red;width:100%;height:100%">
+    <table class="table table-hover table-striped table-condensed" style="height:500px;display:block;overflow-y: scroll;overflow-x:scroll"> 
+		<!-- Table headers -->
+    			<thead> 
+        			<tr>     
+				<th class="col-xs-3">SERIAL_NO</th> 
+        			<th class="col-xs-6">TIME_STAMP</th>
+        			<th class="col-xs-3">DEV_ID</th>
+        			<th class="col-xs-3">STR_1</th>
+                                <th class="col-xs-3">STR_2</th>
+                                <th class="col-xs-3">STR_3</th>
+                                <th class="col-xs-3">STR_4</th>
+                                <th class="col-xs-3">STR_4</th>
+                                <th class="col-xs-3">STR_5</th>
+                                <th class="col-xs-3">STR_6</th>
+                                <th class="col-xs-3">STR_7</th>
+                                <th class="col-xs-3">STR_8</th>
+                                <th class="col-xs-3">STR_9</th>
+                                <th class="col-xs-3">STR_10</th>
+                                <th class="col-xs-3">STR_11</th>
+                                <th class="col-xs-3">STR_12</th>
+                                <th class="col-xs-3">STR_13</th>
+                                <th class="col-xs-5">STR_AVG</th>
+                                <th class="col-xs-3">VOL_1</th>
+                                <th class="col-xs-3">VOL_2</th>
+                                <th class="col-xs-3">VOL_3</th>
+                                <th class="col-xs-3">VOL_4</th>
+                                <th class="col-xs-3">VOL_5</th>
+                                <th class="col-xs-3">VOL_6</th>
+                                <th class="col-xs-3">VOL_7</th>
+                                <th class="col-xs-3">VOL_8</th>
+                                <th class="col-xs-3">VOL_9</th>
+                                <th class="col-xs-3">VOL_10</th>
+                                <th class="col-xs-3">VOL_11</th>
+                                <th class="col-xs-3">VOL_12</th>
+                                <th class="col-xs-3">VOL_13</th>
+                                <th class="col-xs-5">VOL_AVG</th>
+                                <th class="col-xs-5">TEMP</th>
+                                <th class="col-xs-5">POWER_AVG</th>
+				</tr> 
+    			</thead> 
+      
+<!-- For loop logic of jinja template -->
+	         	{%for j in data1%} 
+                        <!-- table rows -->
+			<tbody>
+			    <tr> 
+    			    <td class="col-xs-3">{{j.id}}</td> 
+    			    <td class="col-xs-6">{{j.stamp}}</td>
+    			    <td class="col-xs-3">{{j.devId}}</td>
+    			    <td class="col-xs-3">{{j.str1}}</td> 
+                            <td class="col-xs-3">{{j.str2}}</td>
+                            <td class="col-xs-3">{{j.str3}}</td>
+                            <td class="col-xs-3">{{j.str4}}</td>
+                            <td class="col-xs-3">{{j.str5}}</td>
+                            <td class="col-xs-3">{{j.str6}}</td>
+                            <td class="col-xs-3">{{j.str7}}</td>
+                            <td class="col-xs-3">{{j.str8}}</td>
+                            <td class="col-xs-3">{{j.str9}}</td>
+                            <td class="col-xs-3">{{j.str10}}</td>
+                            <td class="col-xs-3">{{j.str11}}</td>
+                            <td class="col-xs-3">{{j.str12}}</td>
+                            <td class="col-xs-3">{{j.str13}}</td>
+                            <td class="col-xs-3">{{j.stravg}}</td>
+                            <td class="col-xs-3">{{j.vol1}}</td>
+                            <td class="col-xs-3">{{j.vol2}}</td>
+                            <td class="col-xs-3">{{j.vol3}}</td>
+                            <td class="col-xs-3">{{j.vol4}}</td>
+                            <td class="col-xs-3">{{j.vol5}}</td>
+                            <td class="col-xs-3">{{j.vol6}}</td>
+                            <td class="col-xs-3">{{j.vol7}}</td>
+                            <td class="col-xs-3">{{j.vol8}}</td>
+                            <td class="col-xs-3">{{j.vol9}}</td>
+                            <td class="col-xs-3">{{j.vol10}}</td>
+                            <td class="col-xs-3">{{j.vol11}}</td>
+                            <td class="col-xs-3">{{j.vol12}}</td>
+                            <td class="col-xs-3">{{j.vol13}}</td>
+                            <td class="col-xs-3">{{j.volavg}}</td>
+                            <td class="col-xs-3">{{j.temp}}</td>
+                            <td class="col-xs-3">{{j.poweravg}}</td>
+
+			{%endfor%} 
+  
+			    </tr> 
+			</tbody>
+			<tfoot>
+   			    <tr>
+      			 	  <th class="col-xs-3">SERIAL_NO</th>
+                                <th class="col-xs-6">TIME_STAMP</th>
+                                <th class="col-xs-3">DEV_ID</th>
+                                <th class="col-xs-3">STR_1</th>
+                                <th class="col-xs-3">STR_2</th>
+                                <th class="col-xs-3">STR_3</th>
+                                <th class="col-xs-3">STR_4</th>
+                                <th class="col-xs-3">STR_4</th>
+                                <th class="col-xs-3">STR_5</th>
+                                <th class="col-xs-3">STR_6</th>
+                                <th class="col-xs-3">STR_7</th>
+                                <th class="col-xs-3">STR_8</th>
+                                <th class="col-xs-3">STR_9</th>
+                                <th class="col-xs-3">STR_10</th>
+                                <th class="col-xs-3">STR_11</th>
+                                <th class="col-xs-3">STR_12</th>
+                                <th class="col-xs-3">STR_13</th>
+                                <th class="col-xs-5">STR_AVG</th>
+                                <th class="col-xs-3">VOL_1</th>
+                                <th class="col-xs-3">VOL_2</th>
+                                <th class="col-xs-3">VOL_3</th>
+                                <th class="col-xs-3">VOL_4</th>
+                                <th class="col-xs-3">VOL_5</th>
+                                <th class="col-xs-3">VOL_6</th>
+                                <th class="col-xs-3">VOL_7</th>
+                                <th class="col-xs-3">VOL_8</th>
+                                <th class="col-xs-3">VOL_9</th>
+                                <th class="col-xs-3">VOL_10</th>
+                                <th class="col-xs-3">VOL_11</th>
+                                <th class="col-xs-3">VOL_12</th>
+                                <th class="col-xs-3">VOL_13</th>
+                                <th class="col-xs-5">VOL_AVG</th>
+                                <th class="col-xs-5">TEMP</th>
+                                <th class="col-xs-5">POWER_AVG</th>
+      
+                            </tr>
+                         </tfoot>
+	</table> 
+
+</div>
+{% endblock %}
+  
+

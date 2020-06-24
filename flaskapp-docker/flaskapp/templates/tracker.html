@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>{% block title %} Tracker {% endblock %}</h3>
+
+<div class="container" style="border:2px solid red;width:100%;min-height:400px;">
+	<table class="table table-striped table-dark table-hover" style="height:500px;display:block;overflow-y: scroll;"> 
+<!-- Table headers -->
+    			<thead> 
+        			<tr>     
+				<th class="col-xs-3">SERIAL_NO</th> 
+        			<th class="col-xs-6">TIME_STAMP</th>
+        			<th class="col-xs-3">DEV_ID</th>
+        			<th class="col-xs-3">SUN ANGLE</th>
+        			<th class="col-xs-3">TRACKER_ANGLE</th>
+				</tr> 
+    			</thead> 
+      
+<!-- For loop logic of jinja template -->
+			{%for i in post%} 
+  
+<!-- table rows -->
+			<tbody>
+			    <tr> 
+    			    <td class="col-xs-3">{{i.id}}</td> 
+    			    <td class="col-xs-6">{{i.stamp}}</td>
+    			    <td class="col-xs-3">{{i.devId}}</td>
+    			    <td class="col-xs-3">{{i.SPA}}</td>       
+                            <td class="col-xs-3">{{i.TA}}</td>       
+
+  
+			{%endfor%} 
+  
+			    </tr> 
+			</tbody>
+			<tfoot>
+   			    <tr>
+      			    <th>SERIAL_NO</th>
+                            <th>TIME_STAMP</th>
+                            <th>DEV_ID</th>
+                            <th>SUNANGLE</th>
+                            <th>TRACKER ANGLE</th>
+      
+                            </tr>
+                          </tfoot>
+		</table> 
+	</div>
+</div>
+{% endblock %}
+  
+

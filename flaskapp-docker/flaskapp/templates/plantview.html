@@ -1,0 +1,62 @@
+{%extends 'base.html'%}
+{%block content%}
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css') }}">
+
+<div class="container" style="background-color:black;border:1px solid red">
+  <h2 style="color:white;">PLANTVIEW LAYOUT</h2>
+  <div class="row">
+	  <div class="col-md-2">
+		  <div class="thumbnail">
+			   <img src="{{url_for('static', filename='css/sunpos.png')}}" alt="SUNPOS" style="width:100%;height:100%;">
+			<div class="caption">
+                             <p style="color:white;">SUNPOSITION..</p>
+
+			</div>
+		  </div>
+	  </div>
+	  <div class="col-md-2">
+                  <div class="thumbnail">
+                           <img src="{{url_for('static', filename='css/solarpower.png')}}" alt="SOLARPOWER" style="width:100%;height:100%;">
+                        <div class="caption">
+                             <p style="color:white;">SOLARPOWER..</p>
+
+                        </div>
+                  </div>
+          </div>
+
+	  <div class="col-md-2">
+                  <div class="thumbnail">
+                           <img src="{{url_for('static', filename='css/ac.png')}}" alt="AC" style="width:100%;height:100%;">
+                        <div class="caption">
+                             <p style="color:white;">AC..</p>
+
+                        </div>
+                  </div>
+          </div>
+	<div class="col-md-2">
+                  <div class="thumbnail">
+                           <img src="{{url_for('static', filename='css/main-sub.png')}}" alt="main" style="width:100%;height:100%;">
+                        <div class="caption">
+                             <p style="color:white;">MAINSUBSTATION..</p>
+
+                        </div>
+                  </div>
+          </div>
+
+	  <div class="col-md-2">
+                  <div class="thumbnail">
+                           <img src="{{url_for('static', filename='css/to220.png')}}" alt="220" style="width:100%;height:100%;">
+                        <div class="caption">
+                             <p style="color:white;">220PNG..</p>
+
+                        </div>
+                  </div>
+          </div>
+
+ 
+
+  
+  </div>
+</div>
+
+{%endblock%}
