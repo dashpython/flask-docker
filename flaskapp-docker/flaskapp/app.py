@@ -219,7 +219,7 @@ def on_message(client, userdata, message):
         db.session.add(smbtotal)
         db.session.commit()
         smbdict[smbdata['Dev']].clear()
-        print("SMBdata saved to datatase")
+        print("SMBdata saved to database")
 
 client = mqtt.Client()
 client.on_subscribe = on_subscribe
@@ -230,8 +230,8 @@ time.sleep(1)
 
 subtop="tracker/device/sub"
 pubtop="tracker/device/pub"
-client.username_pw_set("cbocdpsu", "3_UFu7oaad-8")
-client.connect('soldier.cloudmqtt.com', 14035,60)
+#client.username_pw_set("cbocdpsu", "3_UFu7oaad-8")
+client.connect('ec2-35-162-194-10.us-west-2.compute.amazonaws.com')
 client.loop_start()
 client.subscribe(subtop)
 client.loop()
